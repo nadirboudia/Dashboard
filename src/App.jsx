@@ -5,6 +5,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Sidebar from './Components/Sidebar';
 import Navbar from './Components/Navbar';
 import { GetDesignTokens } from './Theme';
+import { Outlet } from 'react-router-dom';
 
 
 
@@ -23,7 +24,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 export default function MiniDrawer() {
  
   const [mode, setMode] = React.useState(localStorage.getItem("currentValue") ? localStorage.getItem("currentValue") : "light");
-
+  const [open, setOpen] = React.useState(false);
   const handleDrawerOpen = () => {
     // @ts-ignore
     setOpen(true);
@@ -49,7 +50,7 @@ export default function MiniDrawer() {
       {/* main */}
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <DrawerHeader />
-      njjj
+        <Outlet/>
       </Box>
     </Box>
      </ThemeProvider>
