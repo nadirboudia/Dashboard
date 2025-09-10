@@ -22,7 +22,7 @@ import PieChartOutlineOutlinedIcon from "@mui/icons-material/PieChartOutlineOutl
 import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 import { useLocation, useNavigate } from "react-router-dom";
-
+import { grey } from '@mui/material/colors';
 function Sidebar({ open, handleDrawerClose }) {
   const DrawerHeader = styled("div")(({ theme }) => ({
     display: "flex",
@@ -184,8 +184,8 @@ function Sidebar({ open, handleDrawerClose }) {
                
                  { backgroundColor:
                     Location.pathname === item.path
-                      ? theme.palette.action.selected
-                      : "inherit",
+                      ? theme.palette.mode === 'dark' ? grey[800] : grey[300]
+                     : null
                   },
                 ]}
               >
@@ -245,8 +245,8 @@ function Sidebar({ open, handleDrawerClose }) {
                     },
                      { backgroundColor:
                     Location.pathname === item.path
-                      ? theme.palette.action.selected
-                      : "inherit",
+                      ? theme.palette.mode === 'dark' ? grey[800] : grey[300]
+                     : null
                   },
               ]}
             >
@@ -303,10 +303,10 @@ function Sidebar({ open, handleDrawerClose }) {
                   : {
                       justifyContent: "center",
                     },
-                     { backgroundColor:
+                    { backgroundColor:
                     Location.pathname === item.path
-                      ? theme.palette.action.selected
-                      : "inherit",
+                      ? theme.palette.mode === 'dark' ? grey[800] : grey[300]
+                     : null
                   },
               ]}
             >
