@@ -1,6 +1,6 @@
 import { DataGrid } from "@mui/x-data-grid";
 import { rows } from "./Data";
-import { Box, color, fontSize, fontWeight, useTheme } from "@mui/system";
+import { Box, useTheme } from "@mui/system";
 import { Typography } from "@mui/material";
 import "./Team.css";
 import {
