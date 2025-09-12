@@ -21,7 +21,7 @@ const router = createBrowserRouter(
 <Route path='/' element={<App/>}>
 <Route index element={<Dashboard/>}/>
 <Route path='team' element={<Team/>}/>
-<Route path='Bar' element={<Bar/>}/>
+<Route path='bar' element={<Bar/>}/>
 <Route path='Pie' element={<Pie/>}/>
 <Route path='Line' element={<Line/>}/>
 <Route path='geography' element={<Geography/>}/>
