@@ -6,6 +6,7 @@ import Sidebar from './Components/Sidebar';
 import Navbar from './Components/Navbar';
 import { GetDesignTokens } from './Theme';
 import { Outlet } from 'react-router-dom';
+import { SnackbarProvider } from 'notistack';
 
 
 
@@ -22,6 +23,8 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 
 
 export default function MiniDrawer() {
+
+ 
  
   const [mode, setMode] = React.useState(localStorage.getItem("currentValue") ? localStorage.getItem("currentValue") : "light");
   const [open, setOpen] = React.useState(false);
@@ -39,6 +42,7 @@ export default function MiniDrawer() {
 
 
   return (
+        <SnackbarProvider maxSnack={3} anchorOrigin={{ vertical: 'top', horizontal: 'right' }}>
   <ThemeProvider theme={theme} >
       <Box sx={{ display: 'flex' }}>
       <CssBaseline />
@@ -54,6 +58,7 @@ export default function MiniDrawer() {
       </Box>
     </Box>
      </ThemeProvider>
+     </SnackbarProvider>
   );
  
 }

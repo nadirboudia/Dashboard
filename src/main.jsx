@@ -14,6 +14,7 @@ import Contacts from './Pages/contacts/Contacts'
 import Faq from './Pages/faq/Faq'
 import Invoices from './Pages/invoices/Invoices'
 import Profile from './Pages/Profile/Profile'
+
 const router = createBrowserRouter(
   createRoutesFromElements(
 
@@ -34,8 +35,11 @@ const router = createBrowserRouter(
   )
 )
 
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+  
     <RouterProvider router={router} />
+ 
   </StrictMode>,
 )

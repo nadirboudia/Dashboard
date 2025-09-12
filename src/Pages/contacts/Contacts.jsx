@@ -56,6 +56,7 @@
   function CustomToolbar() {
     return (
       <Toolbar
+        // @ts-ignore
         sx={{
           display: "flex",
           gap: 1,
@@ -152,7 +153,8 @@
 
   export default function Contacts() {
     return (
-      <Box sx={{ height: "78vh", width: "98%", mx: "auto" }}>
+      <div style={{ height: "100%", width: "100%"  , display:"flex " , justifyContent:"center " , alignItems:"center"}}>
+        <Box sx={{ height: "78vh", width: "98%", mx: "auto" }}>
         <DataGrid
           rows={rows}
           // @ts-ignore
@@ -161,5 +163,6 @@
           showToolbar
         />
       </Box>
+      </div>
     );
   }
